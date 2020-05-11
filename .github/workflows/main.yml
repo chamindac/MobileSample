@@ -56,7 +56,7 @@ jobs:
         # Distribution group
         group: betatesters
         # Artefact to upload (.apk or .ipa)
-        file: /home/runner/work/MobileSample/MobileSample/my-artifact.zip/AwesomeApp/AwesomeApp.Android/bin/Debug/com.companyname.AwesomeApp.apk
+        file: AwesomeApp/AwesomeApp.Android/bin/Debug/com.companyname.AwesomeApp.apk
         # Release notes visible on release page
         releaseNotes: "demo test"
         
