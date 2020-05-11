@@ -39,7 +39,8 @@ jobs:
     
     
   AppCenterDistibute:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
+    needs: Android
     steps:
     - uses: actions/download-artifact@v2
       with:
