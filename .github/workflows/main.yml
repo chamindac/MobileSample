@@ -35,7 +35,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: "**/bin/debug/com.companyname.AwesomeApp.apk"
+        path: "**/bin/Debug/com.companyname.AwesomeApp.apk"
     
     
   AppCenterDistibute:
