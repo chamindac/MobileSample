@@ -32,14 +32,32 @@ jobs:
         cd AwesomeApp.Android
         msbuild AwesomeApp.Android.csproj /verbosity:normal /t:PackageForAndroid /p:Configuration=Debug
     
-    - name: App Center Distribute
-      uses: devussy/AppCenter-Distribute-Github-Action@v1.0.5
+    - uses: actions/upload-artifact@v2
       with:
-        app: Ch-DemoOrg/demoapp
+        name: my-artifact
+        path: "**/com.companyname.AwesomeApp.apk"
+    
+    
+  AppCenterDistibute:
+    runs-on: ubuntu-latest  
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: my-artifact
+
+    - name: App Center
+      uses: wzieba/AppCenter-Github-Action@v1.0.0
+      with:
+        # App name followed by username e.g. wzieba/Sample-App
+        appName: Ch-DemoOrg/demoapp
+        # Upload token - you can get one from appcenter.ms/settings
         token: 373aa94633ee913428d314be9c137be70bc29dbe
+        # Distribution group
         group: betatesters
+        # Artefact to upload (.apk or .ipa)
         file: "**/com.companyname.AwesomeApp.apk"
-        silent: true
+        # Release notes visible on release page
+        releaseNotes: "demo test"
         
   iOS:
     runs-on: macos-latest
