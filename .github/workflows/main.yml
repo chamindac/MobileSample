@@ -30,7 +30,7 @@ jobs:
         cd AwesomeApp
         nuget restore
         cd AwesomeApp.Android
-        msbuild AwesomeApp.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
+        msbuild AwesomeApp.Android.csproj /verbosity:normal /t:PackageForAndroid /p:Configuration=Debug
         
   iOS:
     runs-on: macos-latest
