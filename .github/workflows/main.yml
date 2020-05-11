@@ -32,13 +32,14 @@ jobs:
         cd AwesomeApp.Android
         msbuild AwesomeApp.Android.csproj /verbosity:normal /t:PackageForAndroid /p:Configuration=Debug
     
-    - name: run any App Center CLI command
-      uses: joabalea/App-Center-action@v1.0.2
+    - name: App Center Distribute
+      uses: devussy/AppCenter-Distribute-Github-Action@v1.0.5
       with:
-        command: appcenter distribute stores publish -s betatesters -f "**/com.companyname.AwesomeApp.apk" -r releaseNote -a Ch-DemoOrg/demoapp
+        app: Ch-DemoOrg/demoapp
         token: 373aa94633ee913428d314be9c137be70bc29dbe
-
-    
+        group: betatesters
+        file: "**/com.companyname.AwesomeApp.apk"
+        silent: true
         
   iOS:
     runs-on: macos-latest
