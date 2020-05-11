@@ -22,7 +22,7 @@ jobs:
         ls
         
   Android:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
     - name: Android
@@ -32,19 +32,13 @@ jobs:
         cd AwesomeApp.Android
         msbuild AwesomeApp.Android.csproj /verbosity:normal /t:PackageForAndroid /p:Configuration=Debug
     
-    - name: App Center
-      uses: wzieba/AppCenter-Github-Action@v1.0.0
+    - name: run any App Center CLI command
+      uses: joabalea/App-Center-action@v1.0.2
       with:
-        # App name followed by username e.g. wzieba/Sample-App
-        appName: Ch-DemoOrg/demoapp
-        # Upload token - you can get one from appcenter.ms/settings
+        command: appcenter distribute stores publish -s betatesters -f "**/com.companyname.AwesomeApp.apk" -r releaseNote -a Ch-DemoOrg/demoapp
         token: 373aa94633ee913428d314be9c137be70bc29dbe
-        # Distribution group
-        group: betatesters
-        # Artefact to upload (.apk or .ipa)
-        file: "**/com.companyname.AwesomeApp.apk"
-        # Release notes visible on release page
-        releaseNotes: "demo test"
+
+    
         
   iOS:
     runs-on: macos-latest
