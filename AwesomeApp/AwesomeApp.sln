@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp.Android", AwesomeApp.Android\AwesomeApp.Android.csproj", "{DFEDD7BD-E716-4A0A-A4FE-D2C32CD8AA31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp.Android", "AwesomeApp.Android\AwesomeApp.Android.csproj", "{DFEDD7BD-E716-4A0A-A4FE-D2C32CD8AA31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp.iOS", AwesomeApp.iOS\AwesomeApp.iOS.csproj", "{122FCCFB-AFC6-406F-B857-452384019CB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp.iOS", "AwesomeApp.iOS\AwesomeApp.iOS.csproj", "{122FCCFB-AFC6-406F-B857-452384019CB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp.UWP", AwesomeApp.UWP\AwesomeApp.UWP.csproj", "{38B1B7FB-B271-4467-AFAC-C43E0BE7CF47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp.UWP", "AwesomeApp.UWP\AwesomeApp.UWP.csproj", "{38B1B7FB-B271-4467-AFAC-C43E0BE7CF47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp", AwesomeApp\AwesomeApp.csproj", "{F0334F7B-90DE-4A42-A3ED-AD6F64FF5CBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeApp", "AwesomeApp\AwesomeApp.csproj", "{F0334F7B-90DE-4A42-A3ED-AD6F64FF5CBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
