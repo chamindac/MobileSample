@@ -52,7 +52,7 @@ jobs:
         # App name followed by username e.g. wzieba/Sample-App
         appName: Ch-DemoOrg/demoapp
         # Upload token - you can get one from appcenter.ms/settings
-        token: 373aa94633ee913428d314be9c137be70bc29dbe
+        token: ${{ secrets.AppCenterAPIToken }}
         # Distribution group
         group: betatesters
         # Artefact to upload (.apk or .ipa)
